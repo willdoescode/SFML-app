@@ -17,4 +17,42 @@ void handleKeyEvent(sf::Event event) {
     std::cout << "F" << std::endl;
   if (event.key.code == sf::Keyboard::G)
     std::cout << "G" << std::endl;
+  if (event.key.code == sf::Keyboard::H)
+    std::cout << "H" << std::endl;
+  if (event.key.code == sf::Keyboard::I)
+    std::cout << "I" << std::endl;
+  if (event.key.code == sf::Keyboard::J)
+    std::cout << "J" << std::endl;
+  if (event.key.code == sf::Keyboard::K)
+    std::cout << "K" << std::endl;
+  if (event.key.code == sf::Keyboard::L)
+    std::cout << "L" << std::endl;
+  if (event.key.code == sf::Keyboard::M)
+    std::cout << "M" << std::endl;
+  if (event.key.code == sf::Keyboard::N)
+    std::cout << "N" << std::endl;
+  if (event.key.code == sf::Keyboard::O)
+    std::cout << "O" << std::endl;
+  if (event.key.code == sf::Keyboard::P)
+    std::cout << "P" << std::endl;
+  if (event.key.code == sf::Keyboard::Q)
+    std::cout << "Q" << std::endl;
+  if (event.key.code == sf::Keyboard::R)
+    std::cout << "R" << std::endl;
+  if (event.key.code == sf::Keyboard::S)
+    std::cout << "S" << std::endl;
+  if (event.key.code == sf::Keyboard::T)
+    std::cout << "T" << std::endl;
+  if (event.key.code == sf::Keyboard::U)
+    std::cout << "U" << std::endl;
+  if (event.key.code == sf::Keyboard::V)
+    std::cout << "V" << std::endl;
+  if (event.key.code == sf::Keyboard::W)
+    std::cout << "W" << std::endl;
+  if (event.key.code == sf::Keyboard::X)
+    std::cout << "X" << std::endl;
+  if (event.key.code == sf::Keyboard::Y)
+    std::cout << "Y" << std::endl;
+  if (event.key.code == sf::Keyboard::Z)
+    std::cout << "Z" << std::endl;
 }
