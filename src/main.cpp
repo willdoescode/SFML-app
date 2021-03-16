@@ -1,15 +1,15 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "../include/handle_key_events.h"
+#include "../include/utils.h"
+#include <string>
+
 
 int main() {
   sf::RenderWindow window(sf::VideoMode::getDesktopMode(), "SFML Application");
 
   sf::Texture texture;
-  if (!texture.loadFromFile("assets/character.png")) {
-    std::cerr << "failed to load image" << std::endl;
-    exit(1);
-  }
+  loadTexture(&texture, "assets/character.png");
 
   sf::Sprite sprite;
   sprite.setTexture(texture);
@@ -18,7 +18,7 @@ int main() {
   sprite.setPosition(
     (window.getSize().x / 2.f) - sprite.getGlobalBounds().width / 2.f,
     (window.getSize().y / 2.f) - sprite.getGlobalBounds().height / 2.f
-    );
+  );
 
   while (window.isOpen()) {
     sf::Event event{};
