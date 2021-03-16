@@ -4,10 +4,21 @@
 
 int main() {
   sf::RenderWindow window(sf::VideoMode::getDesktopMode(), "SFML Application");
-  sf::CircleShape shape;
-  shape.setRadius(40.f);
-  shape.setPosition((window.getSize().x / 2.f) - shape.getRadius(), (window.getSize().y / 2.f) - shape.getRadius());
-  shape.setFillColor(sf::Color::Cyan);
+
+  sf::Texture texture;
+  if (!texture.loadFromFile("assets/character.png")) {
+    std::cerr << "failed to load image" << std::endl;
+    exit(1);
+  }
+
+  sf::Sprite sprite;
+  sprite.setTexture(texture);
+
+  sprite.scale(sprite.getScale().x * 10.f, sprite.getScale().y * 10.f);
+  sprite.setPosition(
+    (window.getSize().x / 2.f) - sprite.getGlobalBounds().width / 2.f,
+    (window.getSize().y / 2.f) - sprite.getGlobalBounds().height / 2.f
+    );
 
   while (window.isOpen()) {
     sf::Event event{};
@@ -18,7 +29,7 @@ int main() {
           window.close();
           break;
         case sf::Event::KeyPressed:
-          handleKeyEvent(event);
+          handleKeyEvent(event, &sprite);
           break;
         default:
           break;
@@ -28,7 +39,7 @@ int main() {
     }
 
     window.clear();
-    window.draw(shape);
+    window.draw(sprite);
     window.display();
   }
 }
