@@ -3,6 +3,6 @@
 
 #include <SFML/Graphics.hpp>
 
-void handleKeyEvent(sf::Event, sf::Sprite *pSprite);
+void handleKeyEvent(sf::Event, sf::Sprite*);
 
 #endif //SFML_STUFF_HANDLE_KEY_EVENTS_H
