@@ -7,7 +7,7 @@
 float SPEED = 10.f;
 
 int main() {
-  sf::RenderWindow window(sf::VideoMode::getDesktopMode(), "SFML Application");
+  sf::RenderWindow window(sf::VideoMode::getDesktopMode(), "Cool game");
 
   sf::Texture texture;
   loadTexture(&texture, "assets/character.png");
@@ -62,4 +62,5 @@ int main() {
     window.draw(sprite);
     window.display();
   }
+  return 0;
 }
